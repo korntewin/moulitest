@@ -2,22 +2,22 @@
 
 static void test1(t_test *test)
 {
-	mt_assert(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t"), "AAA \t BBB") == 0);
+	mt_assert(strcmp(ft_strtrim("\t\n  \tAAA \t BBB\t\n  \t", "\t\n "), "AAA \t BBB") == 0);
 }
 
 static void test2(t_test *test)
 {
-	mt_assert(strcmp(ft_strtrim("\t\t\n\t\t   "), "") == 0);
+	mt_assert(strcmp(ft_strtrim("\t\t\n\t\t   ", "\t\n "), "") == 0);
 }
 
 static void test3(t_test *test)
 {
-	mt_assert(strcmp(ft_strtrim(""), "") == 0);
+	mt_assert(strcmp(ft_strtrim("", "\t\n "), "") == 0);
 }
 
 static void test4(t_test *test)
 {
-	mt_assert(strcmp(ft_strtrim("abc"), "abc") == 0);
+	mt_assert(strcmp(ft_strtrim("abc", "\t\n "), "abc") == 0);
 }
 
 void	suite_01_part2_ft_strtrim(t_suite *suite)
