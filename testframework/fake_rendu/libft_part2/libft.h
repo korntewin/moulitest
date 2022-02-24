@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yyang <yyang@student.42.fr>                +#+  +:+       +#+        */
+/*   By: kboonchu <kboonchu@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 15:05:51 by yyang             #+#    #+#             */
-/*   Updated: 2015/01/23 20:35:56 by yyang            ###   ########.fr       */
+/*   Updated: 2022/02/24 09:30:57 by kboonchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 
-void				*ft_memalloc(size_t size);
+void				*ft_calloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);
@@ -64,10 +64,10 @@ char				*ft_strmap(char const *s, char(*f)(char));
 char				*ft_strmapi(char const *s, char(*f)(unsigned int, char));
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
-char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
-char				**ft_strsplit(char const *s, char c);
+char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);

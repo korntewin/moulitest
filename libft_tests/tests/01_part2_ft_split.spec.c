@@ -5,7 +5,7 @@ static char	**tt;
 
 static void test1(t_test *test)
 {
-	tt = ft_strsplit("***salut****!**", '*');
+	tt = ft_split("***salut****!**", '*');
 	mt_assert(strcmp(tt[0], "salut") == 0);
 	mt_assert(strcmp(tt[1], "!") == 0);
 	mt_assert(tt[2] == NULL);
@@ -13,38 +13,38 @@ static void test1(t_test *test)
 
 static void test2(t_test *test)
 {
-	tt = ft_strsplit("*****", '*');
+	tt = ft_split("*****", '*');
 	mt_assert(tt[0] == NULL);
 }
 
 static void test3(t_test *test)
 {
-	tt = ft_strsplit("coucou", '*');
+	tt = ft_split("coucou", '*');
 	mt_assert(strcmp(tt[0], "coucou") == 0);
 	mt_assert(tt[1] == NULL);
 }
 
 static void test4(t_test *test)
 {
-	tt = ft_strsplit("salut****", '*');
+	tt = ft_split("salut****", '*');
 	mt_assert(strcmp(tt[0], "salut") == 0);
 	mt_assert(tt[1] == NULL);
 }
 
 static void test5(t_test *test)
 {
-	tt = ft_strsplit("****salut", '*');
+	tt = ft_split("****salut", '*');
 	mt_assert(strcmp(tt[0], "salut") == 0);
 	mt_assert(tt[1] == NULL);
 }
 
 static void test6(t_test *test)
 {
-	tt = ft_strsplit("", '*');
+	tt = ft_split("", '*');
 	mt_assert(tt &&  tt[0] == NULL);
 }
 
-void	suite_01_part2_ft_strsplit(t_suite *suite)
+void	suite_01_part2_ft_split(t_suite *suite)
 {
 	SUITE_ADD_TEST(suite, test1);
 	SUITE_ADD_TEST(suite, test2);
